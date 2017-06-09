@@ -1,0 +1,6 @@
+# My script to deploy the web application
+deploy.sh
+
+# where database names and passwords are stored
+*.swp
+_secret.php
