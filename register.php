@@ -44,10 +44,10 @@ function register_user($username, $pwhash) {
 	$result = pg_query($dbconn, $query);
 	if ($result == FALSE) {
 		$err = pg_last_error($dbconn);
-		echo "<html><body><p>$err</p><p>$date</p></body></html>";
+		echo "<html><body><p>$err</p></body></html>";
 	} else {
-		echo '<html><body><p><a href="/index.php">'
-			. 'Worked?</a></body?</html>';
+		echo '<html><body><p>Success! <a href="/index.php">'
+			. 'Home</a></body?</html>';
 	}
 
 	$pg_close($dbconn);
