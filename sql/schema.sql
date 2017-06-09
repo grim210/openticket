@@ -14,6 +14,12 @@ create table ot_users (
 	user_group integer references ot_groups(group_id) default 0
 );
 
+create table ot_admins (
+	admin_id serial primary key,
+	user_id integer references ot_users(user_id),
+	group_id integer references ot_groups(group_id)
+);
+
 -- Ticket status.  Just putting in the basics
 create table ot_ticket_status (
 	status_id serial primary key,
